@@ -26,5 +26,4 @@ def archivist_agent(state: dict) -> dict:
     return {
         "target": target,
         "logs": logs,
-        "archive_summary": summary
     }

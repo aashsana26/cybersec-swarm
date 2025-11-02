@@ -31,7 +31,4 @@ def defender_agent(state: dict) -> dict:
 
     logs.append(f"[Defender] Defense plan for {target}: {defense_text}")
 
-    return {"target": target, "logs": logs, "defense_action": defense_text}
-
-
-agents / ar
+    return {"target": target, "logs": logs}
