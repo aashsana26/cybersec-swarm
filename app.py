@@ -3,8 +3,8 @@ import streamlit as st
 from main import run_swarm
 import json
 
-st.set_page_config(page_title="Phantom Protocol — Simulated Swarm", layout="wide")
-st.title("🛡️ Phantom Protocol — Simulated Cybersecurity Swarm (Stage 1)")
+st.set_page_config(page_title="CyberSecurity Swarm", layout="wide")
+st.title("CyberSecurity Swarm")
 
 st.markdown("""
 This demo runs a simulated observation → prediction → attack → defense → archive workflow.
