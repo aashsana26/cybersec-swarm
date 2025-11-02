@@ -1,6 +1,5 @@
-# swarm_graph.py
+from typing import TypedDict, List
 from langgraph.graph import StateGraph, END
-from typing import TypedDict
 from agents import observer, predictor, attacker, defender, archivist
 
 class SwarmState(TypedDict):
@@ -20,7 +19,7 @@ def build_swarm_graph():
     graph.add_edge("predictor", "attacker")
     graph.add_edge("attacker", "defender")
     graph.add_edge("defender", "archivist")
+    graph.add_edge("archivist", END)
     graph.set_entry_point("observer")
-    graph.set_finish_point(END)
 
     return graph.compile()
