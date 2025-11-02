@@ -1,5 +1,6 @@
 # swarm_graph.py
 from langgraph.graph import StateGraph, END
+from typing import TypedDict
 from agents import observer, predictor, attacker, defender, archivist
 
 class SwarmState(TypedDict):

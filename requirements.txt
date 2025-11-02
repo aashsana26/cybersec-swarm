@@ -4,3 +4,5 @@ langgraph
 google-generativeai
 python-dotenv
 pandas
+pydantic
+typing-extensions
