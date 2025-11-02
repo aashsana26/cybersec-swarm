@@ -14,6 +14,6 @@ def observer_agent(state: dict):
     logs.extend(summary_lines)
     logs.append(f"[Observer] Raw observation stored (len issues={len(scan['issues'])})")
 
-    return {"target": target, "logs": logs}
+    return {"target": target, "logs": logs, "observation": result,}
 
 # This is totally incomplete, most of the main "cybersec" work will be here

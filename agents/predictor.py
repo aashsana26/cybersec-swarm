@@ -32,4 +32,4 @@ def predictor_agent(state: dict):
     # Append prediction to logs
     logs.append(f"[Predictor] Prediction for {target}: {prediction_text}")
 
-    return {"target": target, "logs": logs}
+    return {"target": target, "logs": logs, "prediction": prediction_text}

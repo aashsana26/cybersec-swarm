@@ -30,4 +30,4 @@ def attacker_agent(state: dict) -> dict:
 
     logs.append(f"[Attacker] Simulated attack for {target}: {attack_text}")
 
-    return {"target": target, "logs": logs}
+    return {"target": target, "logs": logs, "attack_summary": attack_text}

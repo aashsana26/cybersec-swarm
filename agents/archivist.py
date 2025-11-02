@@ -1,7 +1,7 @@
 import json
 from datetime import datetime
 
-ARCHIVE = []  # attach memory db here, storing in runtime-memory just for demo purposes
+ARCHIVE = []  # runtime memory DB (demo only)
 
 def archivist_agent(state: dict) -> dict:
     target = state.get("target", "target.example.com")
@@ -14,6 +14,17 @@ def archivist_agent(state: dict) -> dict:
     }
     ARCHIVE.append(record)
 
-    logs.append(f"[Archivist] Archived record index={len(ARCHIVE) - 1} at {record['timestamp']}")
+    # Create readable summary
+    summary = {
+        "archive_index": len(ARCHIVE) - 1,
+        "timestamp": record["timestamp"],
+        "log_count": len(logs)
+    }
 
-    return {"target": target, "logs": logs}
+    logs.append(f"[Archivist] Archived record index={summary['archive_index']} at {summary['timestamp']}")
+
+    return {
+        "target": target,
+        "logs": logs,
+        "archive_summary": summary
+    }
