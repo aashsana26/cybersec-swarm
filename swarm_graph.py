@@ -2,9 +2,13 @@
 from langgraph.graph import StateGraph, END
 from agents import observer, predictor, attacker, defender, archivist
 
+class SwarmState(TypedDict):
+    target: str
+    logs: list[str]
+
 def build_swarm_graph():
 
-    graph = StateGraph()
+    graph = StateGraph(SwarmState)
     graph.add_node("observer", observer.observer_agent)
     graph.add_node("predictor", predictor.predictor_agent)
     graph.add_node("attacker", attacker.attacker_agent)
