@@ -16,7 +16,7 @@ def _safe_generate(prompt: str, model_name: str = "gemini-1.5-pro", max_tokens: 
 def predictor_agent(state: dict):
     # observation -> fake scan dict
 
-    logs = state.get("logs, []")
+    logs = state.get("logs", [])
     target = state.get("target", "")
 
     recent_context = "\n".join(logs[-6:]) if logs else "(no logs available)"
