@@ -1,5 +1,6 @@
 streamlit
-langgraph
 langchain
-openai
+langgraph
+google-generativeai
 python-dotenv
+pandas
