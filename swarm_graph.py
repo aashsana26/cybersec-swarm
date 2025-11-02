@@ -4,7 +4,7 @@ from agents import observer, predictor, attacker, defender, archivist
 
 class SwarmState(TypedDict):
     target: str
-    logs: list[str]
+    logs: List[str]
 
 def build_swarm_graph():
 
